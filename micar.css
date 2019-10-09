@@ -1,0 +1,186 @@
+/*开始设置预定义样式*/
+*{
+	margin:0;
+	padding:0;
+}
+ul,li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+/*清除浮动*/
+.clearfix:before .clearfix:after
+{
+	content: "";
+	display: table;
+}
+.clearfix:after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom:1;
+}
+/*预定义样式结束*/
+/*开始写顶部样式*/
+.boxtop	{
+	width:100%;
+	height:48px;
+	background:#333;
+}
+.boxcenter {
+	width:1080px;
+	height:48px;
+	margin:0 auto;
+}
+.boxcenter ul {
+	margin-left:758px;
+}
+.boxcenter ul li {
+	float:left;
+	height:48px;
+}
+.boxcenter ul li:hover {
+	background-color: orange;
+}
+.boxcenter ul li a {
+	display:block;
+	width:80px;
+	height:48px;
+	line-height:48px;
+	text-align:center;
+	font-size:15px;
+	color:#e7e7e7;
+}
+/*设置版心样式*/
+.container {
+	width:1080px;
+	/*height:51px;*/
+	margin:0 auto;
+}
+/*开始设置搜索框和logo*/
+.search {
+	width:1080px;
+	height:60px;
+	margin-top:15px;
+}
+.search .logo {
+	width:169px;
+	height:54px;
+	float:left;
+}
+.search .searchright {
+	float:left;
+	width:350px;
+	height:60px;
+	/*border:solid 2px black;*/
+	margin-left:550px;
+}
+.search .searchright .textbox1 {
+	width:250px;
+	height:50px;
+	border:solid 2px #e7e7e7;
+	color:#ccc;
+	line-height:50px;
+	text-align:center;
+	font-size:16px;
+	margin-right:0;
+}
+.search .searchright .btn1 {
+	width:54px;
+	height:54px;
+	background: #e7e7e7;
+	margin:0;
+	line-height:54px;
+	text-align:center;
+	border:none;
+	color:white;
+	font-size:16px;
+	margin-left:0;
+}
+.search .logo img {
+	width:100%;
+	height:100%;
+}
+/*开始设置购物车核心部分*/
+table {
+	width:1080px;
+	/*height:400px;*/
+	border:solid 2px ;
+}
+thead>tr>th {
+	width:180px;
+	height:40px;
+	text-align:center;
+}
+tbody>tr>td {
+	width:180px;
+	height:120px;
+	text-align:center;
+}
+tbody>tr>td>img {
+	width:180px;
+	height:120px;
+}
+.delete:hover{
+	cursor: pointer;
+}
+/*开始设置最底下的样式*/
+.solid {
+	widows: 100%;
+	border:solid 1px #e7e7e7;
+}
+.footer {
+	width:100%;
+	height:300px;
+	/*background-color: red;*/
+	/*border:solid 1px red;*/
+}
+.logobottom {
+	width:169px;
+	height: 54px;
+	float:left;
+	margin-top:100px;
+}
+.logobottom img {
+	width: 100%;
+	height: 100%;
+}
+.bottomcenter {
+	width:350px ;
+	height: 150px;
+	/*background:red;*/
+	float:left;
+	margin-top:101px;
+	margin-left:222px;
+}
+.bottomcenter p {
+	width: 100%;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	font-size:16px;
+	color:#ccc;
+}
+.bottomcenter p a {
+	display:block;
+	width: 100%;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	color:#666666;
+}
+.bottomright {
+	width:168px;
+	height: 73px;
+	/*background:blue;*/
+	float:left;
+	margin-left:170px;
+	margin-top:96px;
+}
+.bottomright img {
+	width: 100%;
+	height: 100%;
+}

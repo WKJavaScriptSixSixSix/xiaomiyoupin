@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="./micar.css">
+</head>
+<body>
+	<div class="boxtop">
+		<div class="boxcenter">
+			<ul>
+				<li><a href="#">用户中心</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li><a href="#">下载APP</a></li>
+				<li><a href="./mifirst.html">返回首页</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div class="container">
+			<div class="search">
+				<div class="logo">
+					<img src="./images/milogo.png" alt="">
+				</div>
+				<div class="searchright">
+					<input type="text"class="textbox1" placeholder="花好月圆人“尝酒”">
+					<input type="button" value="搜索" class="btn1">
+				</div>
+			</div>
+			<table border="" width="" align="center">
+			    	 <thead>
+			            <tr>
+			                <th>图片</th>
+			                <th>名字</th>
+			                <th>价格</th>
+			                <th>数量</th>
+			                <th>总价</th>
+			                <th>操作</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			           <!--  <tr>
+			                <td><img src="" alt=""></td>
+			                <td>DATA</td>
+			                <td>DATA</td>
+			                <td><input type="number" value="23"></td>
+			                <td></td>
+			                <td>删除</td>
+			            </tr> -->
+			        </tbody>
+   			</table>
+   			<div class="solid"></div>
+			<div class="footer">
+				<div class="logobottom">
+					<img src="./images/milogo.png" alt="">
+				</div>
+				<div class="bottomcenter">
+					<p><a href="#">企业信息:有品科技有限公司&nbsp&nbsp关于我们&nbsp&nbsp加入我们</a></p>
+					<p><a href="#">小米有品平台变更公告</a></p>
+					<p><a href="#">南京市建邺区白龙江东街8号3栋9层</a></p>
+				</div>
+				<div class="bottomright">
+					<img src="./images/logo2.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./ajax.2.0.js"></script>
+<script>
+	class Car {
+		constructor(){
+			this.url="http://localhost/xiaomiyouping/data/goods.json";
+			this.tbody=document.querySelector("tbody");
+			// 首先请求json数据，利用ajax请求
+			this.load();
+			this.addEvent();
+		}
+		load(){
+			var that=this;
+			ajax({
+				url:this.url,
+				success:function(res){
+					// 将请求来的数据转化为对象
+					that.res=JSON.parse(res);
+					// 然后开始请求本地存储的数据
+					that.getLocal();
+				}
+			})
+		}
+		getLocal(){
+			this.goods=localStorage.getItem("goods")?JSON.parse(localStorage.getItem("goods")):[];
+			this.display()
+		}
+		display(){
+			// 将本地存储的数据拿出来
+			var str=" ";
+			// 利用双for循环比较数据，如果id相同就把数据拿出来
+			// 这里本地存储的数据是goods
+			for(var i=0;i<this.res.length;i++){
+				for(var j=0;j<this.goods.length;j++){
+					if(this.res[i].goodsId==this.goods[j].id){
+						str+=` <tr index="${this.res[i].goodsId}">
+			                <td><img src="${this.res[i].url}" alt=""></td>
+			                <td>${this.res[i].name}</td>
+			                <td>${this.res[i].price}</td>
+			                <td><input type="number" value="${this.goods[j].num}" class="num" min=1></td>
+			                <td>${this.res[i].price*this.goods[j].num}</td>
+			                <td class="delete">删除</td>
+			            </tr>`
+					}
+				}
+			}
+			this.tbody.innerHTML=str;
+		}
+		addEvent(){
+			var that=this;
+			this.tbody.addEventListener("click",function(eve){
+				var e=eve||window.event;
+				var target=e.target||e.srcElement;
+				if(target.className=="delete"){
+					that.id=target.parentNode.getAttribute("index");
+					// 删除dom元素
+					target.parentNode.remove();
+					that.setLocal(function(i){
+						that.goods.splice(i,1);
+					})
+				}
+			})
+			this.tbody.addEventListener("input",function(eve){
+				var e=eve||window.event;
+				var target=e.target||e.srcElement;
+				if(target.className=="num"){
+					that.val=target.value;
+					that.id=target.parentNode.parentNode.getAttribute("index");
+					that.setLocal(function(i){
+						that.goods[i].num=that.val;
+					})
+				}
+			})
+		}
+		setLocal(fn){
+			for(var i=0;i<this.goods.length;i++){
+				if(this.goods[i].id==this.id){
+					fn(i);
+				}
+			}
+			localStorage.setItem("goods",JSON.stringify(this.goods));
+		}
+	}
+	new Car();
+</script>
+</html>
