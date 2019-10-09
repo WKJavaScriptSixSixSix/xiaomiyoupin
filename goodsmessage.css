@@ -1,0 +1,256 @@
+/*开始设置预定义样式*/
+*{
+	margin:0;
+	padding:0;
+}
+ul,li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+/*清除浮动*/
+.clearfix:before .clearfix:after
+{
+	content: "";
+	display: table;
+}
+.clearfix:after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom:1;
+}
+/*预定义样式结束*/
+.boxtop	{
+	width:100%;
+	height:48px;
+	background:#333;
+}
+.boxtop ul {
+	margin-left:960px;
+}
+.boxtop ul li {
+	float:left;
+	height:48px;
+}
+.boxtop ul li a {
+	display:block;
+	width:80px;
+	height:48px;
+	line-height:48px;
+	text-align:center;
+	font-size:15px;
+	color:#e7e7e7;
+}
+.boxtop ul li:hover {
+	background-color: orange;
+}
+/*设置版心样式*/
+.container {
+	width:1080px;
+	margin:0 auto;
+}
+/*设置logo和搜素框的样式*/
+.search {
+	width:1080px;
+	height:60px;
+	margin-top:15px;
+}
+.search .logo {
+	width:169px;
+	height:54px;
+	float:left;
+}
+.search .searchright {
+	float:left;
+	width:350px;
+	height:60px;
+	/*border:solid 2px black;*/
+	margin-left:550px;
+}
+.search .searchright .textbox1 {
+	width:250px;
+	height:50px;
+	border:solid 2px #e7e7e7;
+	color:#ccc;
+	line-height:50px;
+	text-align:center;
+	font-size:16px;
+	margin-right:0;
+}
+.search .searchright .btn1 {
+	width:54px;
+	height:54px;
+	background: #e7e7e7;
+	margin:0;
+	line-height:54px;
+	text-align:center;
+	border:none;
+	color:white;
+	font-size:16px;
+	margin-left:0;
+}
+.search .logo img {
+	width:100%;
+	height:100%;
+}
+/*设置一下放大镜外面盒子样式*/
+.bigtop {
+	margin-top:50px;
+	height:400px;
+	/*position:relative;*/
+}
+/*开始设置中间的核心样式*/
+#boxlittle {
+	width:350px;
+	height:350px;
+	border:solid 1px black;
+	position:absolute;
+	/*overflow:hidden;*/
+}
+#boxlittle img {
+	width:100%;
+	height:100%;
+}
+#move {
+	width:100px;
+	height: 100px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:black;
+	opacity:0.4;
+	margin:0;
+	display:none;
+}
+#boxbig {
+		width:340px;
+		height:340px;
+		border:solid 1px red;
+		position:absolute;
+		overflow:hidden;
+		display:none;
+		z-index:999;
+		}
+#picture {
+	position:absolute;
+	left:0;
+	top:0;
+}
+/*开始设置商品详情*/
+#right {
+	width:607px;
+	height:430px;
+	/*border:solid 1px red;*/
+	position:absolute;
+	/*background:red;*/
+	left:646px;
+}
+#right p {
+    line-height: 50px;
+    margin-left:10px;
+    /*text-align:center;*/
+    color:red;
+    height:50px;
+    width:150px;
+    font-size: 20px;
+    /*color: #333;*/
+}
+#right div {
+	width:540px;
+	height: 145px;
+	margin-bottom: 26px;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+#right input {
+	display:block;
+	width:100px;
+	height:30px;
+	/*margin-left:20px;*/
+	font-size:14px;
+	text-align:center;
+	line-height:30px;
+}
+#right span {
+	display:inline-block;
+	margin-top:20px;
+	margin-left:100px;
+	width:130px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:16px;
+	color:white;
+	border-radius:5px;
+	background:orange;
+	cursor: pointer;
+}
+/*底部样式*/
+.solid {
+	width: 100%;
+	border:solid 1px #e7e7e7;
+}
+#footer {
+	width:100%;
+	height:300px;
+	position:relative;
+	/*background-color: red;*/
+	/*border:solid 1px red;*/
+}
+.logobottom {
+	width:169px;
+	height: 54px;
+	float:left;
+	position:absolute;
+	margin-top:100px;
+}
+.logobottom img {
+	width: 100%;
+	height: 100%;
+}
+.bottomcenter {
+	width:350px ;
+	height: 150px;
+	position:absolute;
+	left:109px;
+	/*background:red;*/
+	float:left;
+	margin-top:101px;
+	margin-left:222px;
+}
+.bottomcenter p {
+	width: 100%;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	font-size:16px;
+	color:#ccc;
+}
+.bottomcenter p a {
+	display:block;
+	width: 100%;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	color:#666666;
+}
+.bottomright {
+	width:168px;
+	height: 73px;
+	position:absolute;
+	/*background:blue;*/
+	float:left;
+	left:760px;
+	margin-left:170px;
+	margin-top:96px;
+}
+.bottomright img {
+	width: 100%;
+	height: 100%;
+}
+
