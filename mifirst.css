@@ -1,0 +1,603 @@
+/*开始设置预定义样式*/
+*{
+	margin:0;
+	padding:0;
+}
+ul,li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+/*清除浮动*/
+.clearfix:before .clearfix:after
+{
+	content: "";
+	display: table;
+}
+.clearfix:after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom:1;
+}
+/*预定义样式结束*/
+/*开始设置正式样式*/
+/*设置最顶部样式*/
+.bigbox {
+	width:100%;
+}
+.top {
+	width:100%;
+	height:48px;
+	background:#333;
+}
+/*开始设置最顶部的登录注册*/
+.toptext ul li {
+	float:left;
+	height:48px;
+	margin-left:20px;
+	/*display:block;
+	line-height:30px;*/
+}
+.toptext ul{
+	height:48px;
+}
+.toptext ul li a {
+	display:block;
+	line-height:48px;
+	height:48px;
+	text-align:center;
+	color:white;
+	font-size:16px;
+}
+.toptext {
+	height:48px;
+	margin-left:850px;
+}
+/*开始设置版心*/
+.container {
+	width:1080px;
+	margin:0 auto;
+	/*height:300px;*/
+	/*background-color: red;*/
+}
+/*开始设置搜索框和logo*/
+.search {
+	width:1080px;
+	height:60px;
+}
+.search .logo {
+	width:169px;
+	height:54px;
+	float:left;
+}
+.search .searchright {
+	float:left;
+	width:350px;
+	height:60px;
+	/*border:solid 2px black;*/
+	margin-left:550px;
+}
+.search .searchright .textbox1 {
+	width:250px;
+	height:50px;
+	border:solid 2px #e7e7e7;
+	color:#ccc;
+	line-height:50px;
+	text-align:center;
+	font-size:16px;
+	margin-right:0;
+}
+.search .searchright .btn1 {
+	width:54px;
+	height:54px;
+	background: #e7e7e7;
+	margin:0;
+	line-height:54px;
+	text-align:center;
+	border:none;
+	color:white;
+	font-size:16px;
+	margin-left:0;
+}
+.search .logo img {
+	width:100%;
+	height:100%;
+}
+/*开始设置banner样式*/
+.banner {
+	/*width:1032px;*/
+	height: 450px;
+	/*background:red;*/
+}
+/*左边导航样式*/
+.banner .bannerleft {
+	width:273px;
+	height:450px;
+	background:#845f3f;
+	float:left;
+}
+.banner .bannerleft>ul>li {
+	height:40px;
+	/*width:auto;*/
+	margin-top:8px;
+	text-align:center;
+	line-height:40px;
+	position:relative;
+}
+.banner ul li a {
+	display:block;
+	height:30px;
+	width:273px;
+	line-height:40px;
+	color:#f9f7f5;
+	font-size:16px;
+	position:relative;
+}
+.banner ul li:hover {
+	background:orange;
+}
+/*开始设置二级导航样式*/
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.secondnav2 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-56px;
+}
+.secondnav3 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-104px;
+}
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.secondnav1 {
+	width:759px;
+	height:450px;
+	/*background:red;*/
+	display:none;
+	position:absolute;
+	left:273px;
+	top:-8px;
+}
+.banner .bannerleft ul li{
+	float:left;
+
+}
+.banner .bannerleft ul li ul li a {
+	display:block;
+	width:189.6px;
+	height:41px;
+	background:seagreen;
+	color:white;
+}
+.banner .bannerleft ul li ul li a:hover {
+	background-color:orange;
+	font-size:16px;
+}
+.banner .bannerleft ul li:hover ul {
+	display:block;
+	z-index:999;
+}
+/*右边banner样式*/
+.banner .bannerright {
+	width:759px;
+	height:450px;
+	/*background:blue;*/
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+.banner .bannerright img {
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	left:759px;
+	top:0;
+}
+ .banner .bannerright img:nth-child(1){left:0;}
+/*开始设置banner下面部分样式*/
+.bannerbottom {
+	width:1032px;
+	height:240px;
+	/*background-color: red;*/
+}
+.bannerbottom .bannerbottom1 {
+	width:206px;
+	height:240px;
+	float:left;
+	/*background:red;*/
+}
+.photo1 {
+	width: 157px;
+	height: 126px;
+	margin:30px auto;
+}
+.photo2 {
+	width: 147px;
+	height: 117px;
+	margin:33px auto;
+}
+.photo3 {
+	width: 151px;
+	height: 126px;
+	margin:30px auto;
+}
+.photo4 {
+	width: 147px;
+	height: 119px;
+	margin:33px auto;
+}
+.photo5 {
+	width: 155px;
+	height: 132px;
+	margin:26px auto;
+}
+.bannerbottom .bannerbottom1 p {
+	width:100%;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	color:#666666;
+	font-size:16px;
+}
+/*开始设置小米众筹一块样式*/
+.centertop {
+	width:100%;
+	height:109px;
+}
+.centerleft {
+	width:170px;
+	height: 70px;
+	color:black;
+	line-height:70px;
+	font-size:30px;
+	float:left;
+	margin-left:30px;
+	margin-top:20px;
+}
+.centerright {
+	width: 80px;
+	height: 40px;
+	line-height:40px;
+	float:left;
+	font-size:16px;
+	color:#ccc;
+	margin-left:768px;
+	margin-top:70px;
+}
+.centerbody {
+	width:100%;
+	height:282px;
+}
+.centerbody .centerbody1 {
+	width:550px;
+	height: 267px;
+	float:left;
+}
+.centerbody .centerbody1 img {
+	width: 100%;
+	height: 100%;
+}
+.centerbody .centerbody2 {
+	width:250px;
+	height: 260px;
+	float:left;
+}
+.centerbody .centerbody2 img {
+	width: 100%;
+	height: 100%;
+}
+.centerbody .centerbody3 {
+	width:280px;
+	height: 264px;
+	float:left;
+}
+.centerbody .centerbody3 img {
+	width: 100%;
+	height: 100%;
+}
+/*开始设置限时购部分样式*/
+.xianshigou{
+	width: 100%;
+	height:90px;
+	/*background:black;*/
+}
+.xianshigou .xianshigouleft {
+	width:130px;
+	height: 50px;
+	font-size:30px;
+	line-height:50px;
+	color:black;
+	float:left;
+	margin-top:30px;
+	margin-left:10px;
+}
+.xianshigou .xianshigouright {
+	width:130px;
+	height: 50px;
+	font-size:30px;
+	line-height:50px;
+	color:white;
+	float:left;
+	margin-left:810px;
+	margin-top:30px;
+}
+/*开始设置限时购部分的样式*/
+.xianshigoubody {
+	width:100%;
+	height:350px;
+}
+.xianshigoubody .xianshigoubody1{
+	float:left;
+	width:260px;
+	height:350px;
+}
+.xianshigoup1 {
+	width:100%;
+	height:250px;
+}
+.xianshigoup1 img {
+	width: 100%;
+	height: 100%;
+}
+.xianshigoubody .xianshigoubody2{
+	float:left;
+	width:260px;
+	height:350px;
+	margin-left:10px;
+}
+.xianshigoup2 {
+	width:100%;
+	height:250px;
+}
+.xianshigoup2 img {
+	width: 100%;
+	height: 100%;
+}
+.xianshigoubody .xianshigoubody3{
+	float:left;
+	width:260px;
+	height:350px;
+	margin-left:10px;
+}
+.xianshigoup3 {
+	width:100%;
+	height:250px;
+}
+.xianshigoup3 img {
+	width: 100%;
+	height: 100%;
+}
+.xianshigoubody .xianshigoubody4{
+	float:left;
+	width:260px;
+	height:350px;
+	margin-left:20px;
+}
+.xianshigoup4 {
+	width:100%;
+	height:250px;
+}
+.xianshigoup4 img {
+	width: 100%;
+	height: 100%;
+}
+/*设置相应的字体样式*/
+.xianshigoubody  span  {
+	display:block;
+	width: 100%;
+	height: 50px;	
+	line-height:50px;
+	text-align:center;
+	font-size:25px;
+	color:black;	
+}
+.xianshigoubody a {
+	display:block;
+	width: 100%;	
+	height: 50px;
+	line-height:50px;
+	text-align:center;
+	font-size:25px;
+	color:red;		
+}
+	/*开始设置专属推荐部分样式*/
+	.bodytop {
+		width: 100%;
+		height: 100px;
+		/*background:black;*/
+	}
+	.bodytop span {
+		display:block;
+		width:180px;
+		height: 80px;
+		margin-top:15px;
+	}
+.bodytop span a {
+	display:block;
+	height:80px;
+	line-height:80px;
+	color:red;
+	font-size:25px;
+}
+/*核心部位样式*/
+.body {
+	width: 100%;
+	overflow:auto;
+	/*border:solid 1px black;*/
+}
+.goods {
+	width:270px;
+	height:350px;
+	border:solid 1px #e7e7e7;
+	box-sizing:border-box;
+	float:left;
+	text-align:center;
+	/*margin-left:1px;*/
+	/*开启怪异盒子模型*/
+}
+.goods img {
+	width:264px;
+	height:198px;
+}
+.goods p {
+	width:100%;
+	margin-top: 11px;
+    margin-bottom: 0;
+    height: 22px;
+    line-height: 22px;
+    text-align:center;
+    /*background:#f8f8f8;*/
+}
+.goods>div>a {
+	display:block;
+	width:100%;
+	/*margin-top: 11px;*/
+    margin-bottom: 0;
+    height: 33px;
+    line-height: 33px;
+    text-align:center;
+}
+.goods div {
+	background-color:#f8f8f8;
+}
+.goods span {
+	display:block;
+	background:pink;
+	height:30px;
+	line-height:30px;
+	width:100px;
+	border-radius:5px;
+	margin:10px auto 0;
+	color:black;
+	fot-size:16px;
+	cursor: pointer;
+}
+.goods span:hover {
+	width:105px;
+	height:35px;
+	background:orange;
+}
+/*核心部位样式结束*/
+.solid {
+	widows: 100%;
+	border:solid 1px #e7e7e7;
+}
+.footer {
+	width:100%;
+	height:300px;
+	/*background-color: red;*/
+	/*border:solid 1px red;*/
+}
+.logobottom {
+	width:169px;
+	height: 54px;
+	float:left;
+	margin-top:100px;
+}
+.logobottom img {
+	width: 100%;
+	height: 100%;
+}
+.bottomcenter {
+	width:350px ;
+	height: 150px;
+	/*background:red;*/
+	float:left;
+	margin-top:101px;
+	margin-left:222px;
+}
+.bottomcenter p {
+	width: 100%;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	font-size:16px;
+	color:#ccc;
+}
+.bottomcenter p a {
+	display:block;
+	width: 100%;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	color:#666666;
+}
+.bottomright {
+	width:168px;
+	height: 73px;
+	/*background:blue;*/
+	float:left;
+	margin-left:170px;
+	margin-top:96px;
+}
+.bottomright img {
+	width: 100%;
+	height: 100%;
+}
+/*写一下楼层的样式*/
+
+

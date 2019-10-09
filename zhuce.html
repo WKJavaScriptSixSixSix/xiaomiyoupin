@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录注册</title>
+	<link rel="stylesheet" href="./zhuce.css">
+</head>
+<body>
+	<div class="box">
+		<div class="container">
+			<div class="first">
+				<div class="p1">
+					<img src="./images/p1.png" alt="">
+				</div>
+			</div>
+			<div class="second">
+				<div class="secondtop">
+					<div class="p2">
+						<img src="./images/p2.png" alt="">
+					</div>
+				</div>
+				<div class="secondbottom">
+					<a href="#">小米账号注册</a>
+				</div>
+			</div>
+			<div class="input">
+				<input type="text" class="input1" placeholder="邮箱/手机号码/ID">
+				<input type="password" class="input2" placeholder="密码">
+				<input type="button" value="提交" class="input3">
+				<span><a href="#">手机短信验证码注册</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#">立即注册/忘记密码</a></span>
+				<span>其他方式注册</span>
+				<div class="other">
+					<div class="last">
+							<img src="./images/p3.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	window.onload=function(){
+		class zhuce {
+		constructor(){
+			// 节点的获取
+			this.user=document.querySelector(".input1");
+			this.pass=document.querySelector(".input2");
+			this.btn=document.querySelector(".input3");
+			// 本地存储的判断
+			this.addEvent()
+		}
+		addEvent(){
+			var that=this;
+			this.btn.onclick=function(){
+				// 方法本地存储的获取和判断
+				that.setLocal()
+			}
+		}
+		setLocal(){
+			// 首先获取本地存储,然后去判断有还是没有,
+			this.userMsg = localStorage.getItem("userMsg");
+			this.userMsg = this.userMsg ? JSON.parse(this.userMsg):[];
+			// 没有就直接存储，有就判断是否重名
+			if(this.userMsg.length<1){
+				this.userMsg.push({
+					user:this.user.value,
+					pass:this.pass.value,
+					 onoff:0
+					// 给一个状态判断是否登录注册
+				})
+			}else{
+				var o=this.userMsg.some(val=>{
+					return val.user===this.user.value;
+				})
+				if(o){
+					alert("用户名重复");
+				}else{
+					this.userMsg.push({
+						user:this.user.value,
+						pass:this.pass.value,
+						onoff:0
+					})
+					console.log("success");
+					setTimeout(()=>{
+						location.href="./denglu.html"
+					},2000)
+				}
+			}
+			localStorage.setItem("userMsg",JSON.stringify(this.userMsg))
+		}
+	}
+	new zhuce();
+	}
+</script>
+</html>

@@ -1,0 +1,132 @@
+/*开始设置预定义样式*/
+*{
+	margin:0;
+	padding:0;
+}
+ul,li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+/*清除浮动*/
+.clearfix:before .clearfix:after
+{
+	content: "";
+	display: table;
+}
+.clearfix:after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom:1;
+}
+/*预定义样式结束*/
+/*开始设置正式样式*/
+.box {
+	width:100%;
+	background:#ccc;
+}
+.container {
+	width: 854px;
+	height: 720px;
+	background:white;
+	margin:0 auto;
+}
+.first {
+	width:100%;
+	height:85px;
+	padding-top:5px;
+}
+.p1 {
+	width: 88px;
+	height: 76px;
+	margin-left:766px;
+	/*margin-top:5px;*/
+}
+.p1 img {
+	width: 100%;
+	height: 100%;
+}
+/*开始设置中间部分小米账号登录*/
+.second {
+	width: 100%;
+	height:190px;
+}
+.secondtop {
+	width:100%;
+	height:95px;
+}
+.p2 {
+	width:77px;
+	height: 74px;
+	margin:0 auto;
+}
+.p2 img {
+	width: 100%;
+	height: 100%;
+}
+.secondbottom {
+	width:100%;
+	height:95px;
+}
+.secondbottom a {
+	display:block;
+	width:100%;
+	height:100%;
+	line-height:95px;
+	text-align:center;
+	font-size:30px;
+	color:black;
+}
+/*开始设置账号输入框*/
+.input .input2,.input .input1 {
+	display:block;
+	margin:0 auto;
+	width:417px;
+	height: 60px;
+	margin-top:13px;
+	border:solid 1px #e6e6e6;	
+	line-height:60px;
+	font-size:18px;
+	/*color:#e6e6e6;*/
+}
+.input span{
+	display:block;
+	height:45px;
+	width: 100%;
+	line-height:45px;
+	text-align:center;
+}
+.input .input3 {
+	display:block;
+	margin:0 auto;
+	width:423px;
+	height: 60px;
+	margin-top:13px;
+	background:#ff6700;	
+	border:none;
+	color:white;
+	font-size:16px;
+}
+.input {
+	width:100%;
+}
+.other {
+	width:100%;
+	height:66px;
+}
+.last {
+	width:313px;
+	height:66px;
+	margin-left:264px;
+}
+.last img {
+	width: 100%;
+	height: 100%;
+}
+.last img:hover {
+	cursor: pointer;
+}

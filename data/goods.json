@@ -1,0 +1,75 @@
+[
+	{
+	"name":"小米电脑",
+	"price":"3000",
+	"url":"./images/page1.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods1"
+},{
+	"name":"小米手机",
+	"price":"2000",
+	"url":"./images/page2.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods2"
+},{
+	"name":"榨汁机",
+	"price":"999",
+	"url":"./images/page3.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods3"
+},{
+	"name":"大闸蟹",
+	"price":"666",
+	"url":"./images/page4.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods4"
+},{
+	"name":"运动长裤",
+	"price":"1999",
+	"url":"./images/page5.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods5"
+},{
+	"name":"运动上衣",
+	"price":"566",
+	"url":"./images/page6.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods6"
+},{
+	"name":"电动牙刷",
+	"price":"666",
+	"url":"./images/page7.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods7"
+},{
+	"name":"清洗液",
+	"price":"388",
+	"url":"./images/page8.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods8"
+},{
+	"name":"时尚眼镜",
+	"price":"256",
+	"url":"./images/page9.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods9"
+},{
+	"name":"金条",
+	"price":"368",
+	"url":"./images/page10.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods10"
+},{
+	"name":"小米电器",
+	"price":"199",
+	"url":"./images/page11.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods11"
+},{
+	"name":"茅台酒",
+	"price":"9900",
+	"url":"./images/page12.jpg",
+	"tips":"商品详情",
+	"goodsId":"goods12"
+}
+]
