@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜效果复习</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		div {
+			float:left;
+		}
+		#boxlittle {
+			width:350px;
+			height:350px;
+			border:solid 1px black;
+			position:absolute;
+		}
+		#boxlittle img {
+			width: 100%;
+			height: 100%;
+		}
+		/*小滑块*/
+		#move {
+			width: 100px;
+			height: 100px;
+			position:absolute;
+			top:0;
+			left:0;
+			background:black;
+			opacity:0.4;
+			margin:0;
+			display:none;
+		}
+		#boxbig {
+			width:340px;
+			height:340px;
+			border:solid 1px red;
+			position:absolute;
+			overflow:hidden;
+			display:none;
+		}
+		#picture {
+			position:absolute;
+			left:0;
+			top:0;
+		}
+	</style>
+</head>
+<body>
+	<div id="boxlittle">
+		<img src="./images/page10.jpg" alt="">
+		<!-- 小滑块 -->
+		<p id="move"></p>
+	</div>
+	<div id="boxbig">
+		<img src="./images/page10.jpg" alt="" id="picture">
+	</div>
+</body>
+<script>
+	var oboxlittle=document.getElementById("boxlittle");
+	var omove=document.getElementById("move");
+	var oboxbig=document.getElementById("boxbig");
+	var opicture=document.getElementById("picture");
+	// 事件绑定，鼠标移入boxlittle触发事件
+	oboxlittle.onmousemove=function(eve){
+		var e=eve||window.event;
+		// 获取距离屏幕的坐标
+		var xn=e.clientX;
+		var yn=e.clientY;
+		// 让小滑块动起来
+		var moveleft=xn-oboxlittle.offsetLeft-omove.offsetWidth/2;
+		var movetop=yn-oboxlittle.offsetTop-omove.offsetHeight/2;
+		// 左边的约束条件
+		if(moveleft<0){
+			moveleft=0;
+		}
+		// 右边的约束条件
+		if(moveleft>oboxlittle.offsetWidth-omove.offsetWidth){
+			moveleft=oboxlittle.offsetWidth-omove.offsetWidth
+		}
+		if(movetop<0){
+			movetop=0;
+		}
+		if(movetop>oboxlittle.offsetHeight-omove.offsetHeight){
+				movetop=oboxlittle.offsetHeight-omove.offsetHeight;
+		}
+		omove.style.left=moveleft+"px";
+		omove.style.top=movetop+"px";
+		// 让小滑块显示出来
+		omove.style.display="block";
+		// 让大盒子显示出来
+		oboxbig.style.display='block';
+		oboxbig.style.left=oboxlittle.offsetLeft+oboxlittle.offsetWidth+'px';
+		oboxbig.style.top=oboxlittle.offsetTop+'px';
+		var opictureleft=moveleft/(oboxlittle.offsetWidth-omove.offsetWidth)*(oboxbig.offsetWidth-opicture.offsetWidth);
+		var opicturetop=movetop/(oboxlittle.offsetHeight-omove.offsetHeight)*(oboxbig.offsetHeight-opicture.offsetHeight);
+		opicture.style.left=opictureleft+"px";
+		opicture.style.top=opicturetop+"px";
+		// 让鼠标滑块消失时放大镜消失
+		oboxlittle.onmouseleave=function(){
+			oboxbig.style.display="none";
+			omove.style.display="none";
+		}
+	}
+</script>
+</html>

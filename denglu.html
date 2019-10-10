@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录注册</title>
+	<link rel="stylesheet" href="./zhuce.css">
+</head>
+<body>
+	<div class="box">
+		<div class="container">
+			<div class="first">
+				<div class="p1">
+					<img src="./images/p1.png" alt="">
+				</div>
+			</div>
+			<div class="second">
+				<div class="secondtop">
+					<div class="p2">
+						<img src="./images/p2.png" alt="">
+					</div>
+				</div>
+				<div class="secondbottom">
+					<a href="#">小米账号登录</a>
+				</div>
+			</div>
+			<div class="input">
+				<input type="text" class="input1" placeholder="邮箱/手机号码/ID">
+				<input type="password" class="input2" placeholder="密码">
+				<input type="button" value="登录" class="input3">
+				<span><a href="#">手机短信验证码注册</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#">立即注册/忘记密码</a></span>
+				<span>其他方式登录</span>
+				<div class="other">
+					<div class="last">
+							<img src="./images/p3.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	class denglu {
+		constructor(){
+			this.user=document.querySelector(".input1");
+			this.pass=document.querySelector(".input2");
+			this.btn=document.querySelector(".input3");
+			// 点击登录事件绑定
+			this.addEvent();
+			// 本地存储
+			this.getLocal();
+		}
+		addEvent(){
+			var that=this;
+			this.btn.onclick=function(){
+				that.login();
+			}
+		}
+		getLocal(){
+			// 获取本地存储的数据
+			this.userMsg=localStorage.getItem("userMsg");
+			// 将字符型数据转化为数组
+			this.userMsg=this.userMsg?JSON.parse(this.userMsg):[];
+		}
+		login(){
+			// 判断用户输入的数据和本地存储的数据是不是完全吻合
+			var i=0;
+			var o=this.userMsg.some((val,index)=>{
+				i=index;
+				return val.user==this.user.value&&val.pass==this.pass.value;
+			})
+			if(o){
+				alert("登陆成功");
+				this.userMsg[i].onoff=1;
+				setTimeout(()=>{
+					location.href="mifirst.html";
+				},2000)
+			}else{
+				alert("不存在该用户,请先注册");
+				setTimeout(()=>{
+					location.href="zhuce.html";
+				},2000)
+			}
+			localStorage.setItem("userMsg",JSON.stringify(this.userMsg))
+		}
+	}
+	new denglu();
+</script>
+</html>
